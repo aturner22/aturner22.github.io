@@ -24,7 +24,8 @@ search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
+
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
@@ -57,8 +58,11 @@ plugins:
 
 author:
   name   : "Ashley Turner"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "A short biography should be here"
+  avatar : "/assets/images/headshot.jpeg"
+  bio: |- 
+    A fan of mathematics, technology, music and the outdoors.
+
+    Ex-Oxford, currently at Imperial.
   links:
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
@@ -72,6 +76,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/ashleyturnerr"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@ashleyturner7986"
 
 footer:
   links:
@@ -84,6 +91,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/ashleyturnerr"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@ashleyturner7986"
 
 defaults:
   # _posts
