@@ -3,7 +3,7 @@ permalink: /technical_consulting/
 title: "Technical Consulting"
 ---
 
-Expertise in **data science, statistics, machine learning and AI**, with particular experience in the applied use of LLMs for unstructured data analysis and extraction.
+Expertise in **data science, statistics, AI and machine learning**, with particular experience in the applied use of LLMs for unstructured data analysis and extraction.
 
 Available for collaborations with businesses and researchers requiring expertise in **statistics, machine learning and AI and data-centric projects**.  
 
