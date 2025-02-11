@@ -44,9 +44,10 @@ Please [get in contact]({{ site.baseurl }}/contact) to discuss potential collabo
 
 ## **Previous Partners**  
 
-![Image](/assets/images/intropic_io_logo.jpeg){: width="50" } [Intropic](https://intropic.io/)  
+![Intropic](/assets/images/intropic_io_logo.jpeg){: width="50" } [Intropic](https://intropic.io/)  
 
-![Image](/assets/images/youni_tbc_logo.jpeg){: width="50" } [Youni](https://theyouniapp.com/)  
+![Youni](/assets/images/youni_tbc_logo.jpeg){: width="50" } [Youni](https://theyouniapp.com/)  
 
-![Image](/assets/images/nolsonlabs.png){: width="50" } [Nolsonlabs](https://www.nolsonlabs.com/)  
+![Nolsonlabs](/assets/images/nolsonlabs.png){: width="50" } [Nolsonlabs](https://www.nolsonlabs.com/)
+
 ---
