@@ -5,7 +5,7 @@ title: "Music"
 
 I am a tenor saxophonist and have experience performing in a variety of settings, from numerous small ensemble gigs to larger big bands.
 
-Please [get in touch]({{ site.baseurl }}/contact).  
+For enquiries, please [get in touch]({{ site.baseurl }}/contact).  
 
 ---
 
