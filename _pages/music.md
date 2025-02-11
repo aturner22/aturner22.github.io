@@ -5,11 +5,11 @@ title: "Music"
 
 I am a tenor saxophonist and have experience performing in a variety of settings, from numerous small ensemble gigs to larger big bands.
 
-For enquiries, please [get in touch]({{ site.baseurl }}/contact).  
+Please [get in touch]({{ site.baseurl }}/contact).  
 
 ---
 
-## **Recent Media Posts**  
+## **Recent Media**  
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: center;">
   <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DFuroonMHdV/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="max-width: 600px; min-width: 400px; width: 100%;"></blockquote>
