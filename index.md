@@ -1,18 +1,12 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: single
 title: "About"
 order: 1
 author_profile: true
 ---
 
-Hi, I'm Ashley, welcome to my website! I'm a mathematics student (pursuing an MSc and PhD at Imperial College London) and technical consultant specialising in statistics, applied LLMs, machine learning and data science. In my spare time I play jazz saxophone and enjoy hiking and travelling. 
+Background in **statistics, machine learning and economics**, with industry experience spanning both academic research and business applications.  
 
-Work With Me 
-Research 
-Music 
-Blog
+Currently undertaking a master’s and PhD in **Statistics and Mathematics** at **Imperial College London**. Previous studies include **Economics and Management** the **University of Oxford**, followed by work in **data science** and **quantitative engineering** in the financial sector, before transitioning to mathematics and machine learning.  
 
-logos: imperial, oxford, intropic, youni etc 
+Beyond technical work, I play the saxophone, regularly performing and writing jazz music. I also enjoy hiking, traveling and generally being in nature!

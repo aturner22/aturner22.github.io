@@ -3,7 +3,7 @@ permalink: /contact/
 title: "Contact"
 ---
 
-Please use the form below to get in touch: 
+Please fill out the form below: 
 
 <form
   action="https://formspree.io/f/mgvozdnp"
