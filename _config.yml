@@ -59,7 +59,6 @@ plugins:
   - jekyll-remote-theme
 
 author:
-  name   : "Ashley Turner"
   avatar : "/assets/images/headshot.jpeg"
   bio: |- 
     A fan of mathematics, technology, music and the outdoors.
