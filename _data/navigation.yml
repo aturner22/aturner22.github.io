@@ -1,6 +1,8 @@
 main:
   - title: "About"
     url: /
+  - title: "Research"
+    url: /research/
   - title: "Technical Consulting"
     url: /technical_consulting/
   - title: "Music"

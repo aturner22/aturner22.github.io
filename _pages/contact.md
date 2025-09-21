@@ -3,7 +3,9 @@ permalink: /contact/
 title: "Contact"
 ---
 
-Please fill out the form below: 
+The best way to reach me is to email me at ```ashley.turner24[at]imperial.ac.uk``` or send me a message on [LinkedIn](https://www.linkedin.com/in/ashleygturner).
+
+Or you can fill out this form: 
 
 <form
   action="https://formspree.io/f/mgvozdnp"
