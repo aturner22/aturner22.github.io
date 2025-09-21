@@ -21,7 +21,7 @@ I'm available for consulting, advisory roles, and technical partnerships.
 
 ## Recent Projects & Achievements
 
-### Hackathon Success (2024)
+### Hackathons
 Winner of two [SoTA](https://ilikethefuture.com/) hackathons, developing:
 - An automated Bayesian prior elicitation system for non-technical experts
 - An AI geoengineering simulator using MLWP models
