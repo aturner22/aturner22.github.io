@@ -22,6 +22,8 @@ I'm available for consulting, advisory roles, and technical partnerships.
 ## Recent Projects & Achievements
 
 ### Hackathons
+Winner of the [Openweather Challenge 2025](https://challenge.openweather.co.uk/) for my submission [WIRE](https://wire-delta.vercel.app/), a hazard evaluation dashboard for care institutions 
+
 Winner of two [SoTA](https://ilikethefuture.com/) hackathons, developing:
 - An automated Bayesian prior elicitation system for non-technical experts
 - An AI geoengineering simulator using MLWP models
