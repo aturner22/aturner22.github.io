@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- if jekyll.environment == "production" %}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.open-meteo.com; form-action 'none'; base-uri 'self'; object-src 'none'">
+{%- endif %}
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}</title>
+{% seo title=false %}
+{%- assign v = site.time | date: "%s" %}
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/font-libertinus-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/font-libertinus-sans-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v={{ v }}">
+<script src="/assets/theme.js?v={{ v }}"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas data-fig="field" aria-hidden="true"></canvas>
+<canvas data-fig="earth" title="Drag to spin" aria-hidden="true"></canvas>
+
+<header>
+  <div class="wrap">
+    <p><a href="/">{{ site.title }}</a></p>
+    <nav aria-label="Main">
+      <a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>About</a>
+      <a href="/research/"{% if page.url == "/research/" %} aria-current="page"{% endif %}>Research</a>
+      <a href="/work/"{% if page.url == "/work/" %} aria-current="page"{% endif %}>Work</a>
+      <a href="/music/"{% if page.url == "/music/" %} aria-current="page"{% endif %}>Music</a>
+      <button id="theme" type="button" aria-label="Switch between light and dark"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 2a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <div{% if page.photo %} class="intro{% if page.url == "/" %} headshot{% endif %}"{% endif %}>
+    <h1>{{ page.title | smartify }}</h1>
+    {%- if page.photo %}
+    <img src="{{ page.photo }}" alt="{{ page.photo_alt | default: site.title }}">
+    {%- endif %}
+{%- assign parts = content | split: "<h3" %}
+{{ parts[0] }}
+{%- for part in parts offset: 1 %}
+{%- assign head = part | split: "</h3>" | first %}
+{%- assign rest = part | split: "</h3>" | last %}
+{%- assign bits = head | split: " · " %}
+{%- if bits.size == 2 %}<h3{{ bits[0] }} <span class="date">{{ bits[1] }}</span></h3>{{ rest }}{% else %}<h3{{ head }}</h3>{{ rest }}{% endif %}
+{%- endfor %}
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>ashley.turner24 [at] imperial.ac.uk</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/ashleygturner" rel="me" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+      <li><a href="https://github.com/aturner22" rel="me" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+      <li><a href="https://instagram.com/ashleyturnerr" rel="me" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg></a></li>
+      <li><a href="https://www.youtube.com/@ashleyturner7986" rel="me" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+    </ul>
+    <small><button id="pause" type="button" aria-label="Pause the animation" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path class="pause" d="M7.6 6.6v6.8M12.4 6.6v6.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="play" d="M8 6.4v7.2l5.6-3.6z" fill="currentColor"/></svg></button> <span id="winds" hidden>Winds by <a href="https://open-meteo.com/">Open-Meteo.com</a></span></small>
+  </div>
+</footer>
+<script src="/assets/figures.js?v={{ v }}" defer></script>
+<script src="/assets/site.js?v={{ v }}" defer></script>
+</body>
+</html>
