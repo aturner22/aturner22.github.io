@@ -16,3 +16,4 @@ defaults:
       path: ""
     values:
       layout: default
+      image: /assets/photo-ashley-turner.jpg
